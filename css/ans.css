@@ -1,0 +1,361 @@
+*{
+  box-sizing: border-box;
+}
+hr{
+  border: none;
+  background-color:#ffcc99;
+  height: 1px;
+}
+body{
+  width: 100%;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0px;
+  background: url(../image/answering.gif) repeat center;
+  background-size: cover;
+  font-family: sans-serif;
+}
+#allcontent{
+  position: relative;
+  width: 80%;
+	height: 700px;
+  top: 0;
+  margin: 0 auto;
+  min-width: 800px;
+}
+/* 系统帮助样式 */
+.guide{
+  position: absolute;
+  left: -12%;
+  top: 1%;
+  width: 22%;
+  color: #ffcc99;
+  border-radius: 10px;
+}
+.content{
+  margin-left: 0;
+  display: none;
+  font-size: 12px;
+  border: 1px solid #ffcc99;
+  margin-top: 3px;
+  border-radius: 5px;
+
+}
+.content p{
+  text-align: left;
+  padding-left: 15px;
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+}
+#help{
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  font-family: Tahoma,Verdana;
+  border: 1px solid #ffcc99;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 30%;
+  text-align: center;
+
+}
+/* 标题 */
+.title{ 
+  position: absolute;
+  top: 4%;
+  left: 30%;
+  width: 40%;
+  height: 5%;
+}
+.title img{
+  display: block;
+  margin: 0;
+  width: 100%;
+
+}
+/* 问题选项按钮所在区域定位 */
+#choose{
+  position: absolute;
+  left: 13%;
+  top: 14%;
+  width: 12.25%;
+  height: 4%;
+  padding: 0px;
+  background-color: rgba(253, 245, 230, 0.5);
+}
+/* 问题选项的样式定义 */
+#choose select{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 1% 30%;
+  color: #696969;
+  font-family: Tahoma,Verdana;
+  font-size: 14px;
+  background: url(../image/icon_button.png) no-repeat right;
+  background-size: 15px 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+}
+/* 输入的问题div位置及input样式 */
+#question{
+  position:absolute;
+  left: 27%;
+  top: 14%;
+  width: 45%;
+  height: 4%;
+  padding: 0px;
+}
+#question input[type="text"]{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  padding-left: 5px;
+  margin: 0px;
+  font-size: 14px;
+  font-family: Tahoma,Verdana;
+  background-color: rgba(253, 245, 230, 0.5); 
+}
+/* 提交按钮的位置 */
+#order{
+  position:absolute;
+  left: 74%;
+  top: 14%;
+  width: 12%;
+  height: 4%;
+  padding: 0px;
+}
+/* 提交按钮的样式 */
+#order input[type="submit"]{
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: Tahoma,Verdana;
+  border: 1.5px solid #ffcc99;
+}
+/* 个性化人物选择区域总体位置设置 */
+#role{
+  position: absolute;
+  left: 12%;
+  top: 23%;
+  width: 25%;
+  height: 40%;
+}
+/* 个性化人物图片大小 */
+
+#role img{
+  display: block;
+  margin-top: 5.5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 80%;
+}
+/* 更换个性化人物的按钮设置 */
+#role input[type="button"]{
+  display: block;
+  width: 85%;
+  height: 10%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Tahoma,Verdana;
+  border: 1.5px solid #ffcc99;
+}
+/* 问题及答案显示区域的样式 */
+#display{
+  position: absolute;
+  left: 39%;
+  top: 23%;
+  width: 46%;
+  height: 40%;
+  border: 2px solid #ffcc99;
+  border-radius: 10px;
+  overflow: auto;
+  background-color:rgba(253, 245, 230, 0.5);
+  -webkit-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
+     -moz-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
+          box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
+  background-color:rgba(253, 245, 230, 0.5);
+}
+/* 人物特色语句，及答案样式 */
+.roleplay{
+  font-family: Tahoma,Verdana;
+  font-size: 14px;
+  color: #8DB6CD;
+  text-align: left;
+  padding-left: 20px;
+}
+/* 问题样式 */
+.user{
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+  font-size: 14px;
+  color: #8DB6CD;
+  line-height: 150%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-wrap: break-word;
+}
+.userq{
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+  font-size: 14px;
+  color: #696969;
+  line-height: 150%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-wrap: break-word;
+}
+/* 历史记录区域位置及大小 */
+#review{
+  position: absolute;
+  left: 8.5%;
+  top: 67%;
+  width: 80%;
+  min-height: 18%;
+  border: 2px solid #ffcc99;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+     -moz-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+          box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+  background-color:rgba(253, 245, 230, 0.5);
+}
+/* 历史记录标题居中显示 */
+legend{
+  text-align: left;
+  width: 30%;
+  color: #ffcc99;
+}
+/* 点击显示历史记录 */
+#showhis{
+  margin: 0;
+  margin-top: -20px;
+  width: 30%;
+  color: #ffcc99;
+  font-family: Tahoma,Verdana;
+  font-size: 16px;
+  border: 1px solid #ffcc99;
+  border-radius: 10px;
+  background-color: rgba(252,245,230,0.8);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+     -moz-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+          box-shadow: 0 3px 10px rgba(229,117,84,0.3);
+
+
+}
+/* 历史记录存储区域，初始隐藏，用户点击才显示 */
+#showmsg{
+  width: 100%;
+  margin: 0 auto;
+  color: #696969;
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+  font-size: 14px;
+  line-height: 150%;
+  text-align: left;
+  padding-left: 10px;
+  margin-top: 5px;
+  display: none;
+  background-color:rgba(28, 28, 28, 0);
+}
+/* 滚动条的宽度 */
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgba(229,117,84,0);
+} /* 滚动条的滑轨背景颜色 */
+::-webkit-scrollbar-thumb{
+  background-color: rgba(229,117,84, 0.9);
+  border-radius: 15px;
+} /* 滑块颜色 */
+
+/* 翻页样式定义 */
+#page_navigation{
+  margin-bottom: 1px;
+  display: none;
+}
+#page_navigation a{
+  padding:3px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-size: 12px;
+/*  border:1px solid #ffcc99;*/
+  border: none;
+  border-radius: 5px;
+  margin:2px;
+  color:#ffcc99;
+  text-decoration:none;
+}
+.active_page{
+  background: #ffcc99;
+  color:white !important;
+}
+
+
+/*::-webkit-scrollbar-button {
+background-color: #7c2929;
+}
+::-webkit-scrollbar-corner {
+background-color: black;
+} 
+
+/* text输入框及下拉选择框响应样式 */
+.form-control {
+  display: block;
+  font-size: 14px;
+  color: black;
+  background-color: #fdf5e6;
+  border: 2px solid #ffcc99;
+  border-radius: 5px;
+}
+.form-control:focus {
+  border-color: #ffcc99;
+  outline: none;
+  -webkit-box-shadow: 0 0 8px rgba(229,117,84,0.3);
+     -moz-box-shadow: 0 0 8px rgba(229,117,84.0.3);
+          box-shadow: 0 0 8px rgba(229,117,84,0.3);
+}
+/* 定义按钮样式，按钮中的文本不能被选择*/
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(255,255,255,1);
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  background-color: rgba(252,204,153,0.8);
+  border-radius: 5px;
+}
+.btn:focus,
+.btn:hover{
+  outline: none;
+  background-color: rgba(252,204,153,0.5);
+
+}
+.btn:active{
+  outline: none;
+  background-color: rgba(252,204,153,0.8);
+
+}
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Answering&nbsp;System</title>
+    <link rel="stylesheet" type="text/css" href="css/ans.css"/>
+    <script src="js/jquery-1.3.1.js"></script>
+    <script type="text/javascript" src="js/ans.js"></script>   
+  </head>
+
+  <body>
+    <div id="allcontent">
+      <!-- 使用须知 --> 
+      <div class="guide">
+      <p id="help">Help</p>
+      <div class="content">
+        <!-- <h1>Answering System</h1> -->
+        <p>面向:上海海事大学新生</p>
+        <p>输入框输入你所想要问的问题,如:</p>
+        <p>学校有健身房吗？</p>
+        <p>点击Submit,便可得到回复。</p>
+        <p>轻击Replace可以实现人物选择。</p>
+      </div>
+      </div>
+      <!--  标题 -->
+      <div class="title">
+        <img src="image/title.gif">
+      </div>
+
+      <!-- 要向服务器提交的表单，包括问题种类，问题，submit -->
+      <form id="form1" method="post">
+        <!-- 问题种类的选择 -->
+        <div id="choose" >
+          <select class="form-control" name="type">
+            <option value="ass">Guide</option>
+            <option value="ass">Sports</option>
+            <option value="ass">Test</option>
+          </select>
+        </div>
+        <!-- 问题的输入区域 -->
+        <div id="question">
+          <input type="text" class="form-control"  id="test" name="content" placeholder="Enter you question here."/>
+        </div>
+        <input type="hidden" name="command" value="message" />
+
+        <!-- 提交表单按钮，并且点击按钮会用localstorage存储数据，后显示在历史区域-->
+        <div id="order">
+          <input type="submit" class="btn" name="form_submit" value="Submit" />
+        </div>
+      </form>
+
+      <!-- 个性化人物的选择 -->
+      <div id="role">
+        <img  class="place" src="image/cute.gif" alt="your role" />
+        <input type="button" class="btn" name="replace" id="replace" value="Replace"/>
+      </div>
+
+      <!-- 问题及答案的显示区域 -->
+      <div id="display">
+        <p class="roleplay">Just ask.</p>
+        <p class="userq" id="userinput"></p>
+        <p class="user" id="usercom"></p>
+      </div>
+
+      <!-- 历史消息显示区域 -->
+      <fieldset id="review">
+        <legend></legend>
+        <p id="showhis">Click To Show History</p>
+        <div id="showmsg"></div>
+        <div id='page_navigation'></div>
+        <input type='hidden' id='current_page' />
+        <input type='hidden' id='show_per_page' />
+        
+      </fieldset>
+
+    </div>
+  </body>
+</html>
