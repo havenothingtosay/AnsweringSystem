@@ -51,6 +51,10 @@
       $('document').ready(function() {
         $('input[name=form_submit]').click(function(event) {
           // console.log($('#form1').serialize());
+          if (!$('#test').val()) {
+            alert("Please enter you question.");
+          }
+          else{
           $.post(config.url, $('#form1').serialize(), function(data) {
             // console.log(data);
             data = JSON.parse(data);
@@ -63,9 +67,10 @@
               } else {
                 alert(data.content);
               }
-          });
+          });}
           return false;
-        });      
+        }); 
+
       })
     })(jQuery);
      
